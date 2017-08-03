@@ -16,6 +16,8 @@ Route::get('/', function () {
 });
 
 Route::get('/documents', 'DocumentsController@index');
+Route::get('/abad/{district}', 'DocumentsController@abad');
+Route::get('/snappytest', 'DocumentsController@snappytest');
 
 Auth::routes();
 

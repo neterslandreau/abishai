@@ -185,6 +185,7 @@ return [
         Cviebrock\EloquentSluggable\ServiceProvider::class,
         Conner\Tagging\Providers\TaggingServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
+        Barryvdh\Snappy\ServiceProvider::class,
 
     ],
 
@@ -239,6 +240,8 @@ return [
         'PDF' => Elibyy\TCPDF\Facades\TCPDF::class,
         'Uuid' => Webpatser\Uuid\Uuid::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'SPDF' => Barryvdh\Snappy\Facades\SnappyPdf::class,
+        'SnappyImage' => Barryvdh\Snappy\Facades\SnappyImage::class,
 
     ],
 
