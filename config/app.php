@@ -182,6 +182,9 @@ return [
          */
         Elibyy\TCPDF\ServiceProvider::class,
         Yajra\Oci8\Oci8ServiceProvider::class,
+        Cviebrock\EloquentSluggable\ServiceProvider::class,
+        Conner\Tagging\Providers\TaggingServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
 
     ],
 
@@ -234,6 +237,8 @@ return [
 
         // Third-party
         'PDF' => Elibyy\TCPDF\Facades\TCPDF::class,
+        'Uuid' => Webpatser\Uuid\Uuid::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
 
     ],
 
