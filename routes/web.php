@@ -18,6 +18,8 @@ Route::get('/', function () {
 Route::get('/documents', 'DocumentsController@index');
 Route::get('/abad/{district}', 'DocumentsController@abad');
 Route::get('/snappytest', 'DocumentsController@snappytest');
+Route::get('/test', 'TestController@test');
+Route::get('/pi', 'TestController@pi');
 
 Auth::routes();
 
