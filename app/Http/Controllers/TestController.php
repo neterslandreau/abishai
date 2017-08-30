@@ -7,6 +7,14 @@ use DB;
 
 class TestController extends Controller
 {
+	/**
+	 * Construct the controller to be accessible only to auth users
+	 */
+	public function __construct()
+	{
+		$this->middleware('auth');
+	}
+
     public function test()
     {
     	$results = DB::connection('oracle')->select("select * from user_od where email='roseline.seweje@lennar.com'");
@@ -16,6 +24,11 @@ class TestController extends Controller
     	return view('tests.test', compact('results'));
     }
 
+    /**
+     * phpinfo()
+     *
+     * @return output of phpinfo()
+     */
     public function pi() {
     	phpinfo();
     }
