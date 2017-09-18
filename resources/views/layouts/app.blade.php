@@ -71,6 +71,23 @@
             </div>
         </nav>
 
+        @if ($flash = session('success'))
+
+        <div class="alert alert-success" role="alert">
+            {{ $flash }}
+        </div>
+
+        @endif
+
+
+        @if ($flash = session('error'))
+
+        <div class="alert alert-danger" role="alert">
+            {{ $flash }}
+        </div>
+
+        @endif
+
         @yield('content')
     </div>
 

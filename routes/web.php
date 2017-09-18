@@ -18,8 +18,12 @@ Route::get('/', function () {
 Route::get('/documents', 'DocumentsController@index');
 Route::get('/abad/{district}', 'DocumentsController@abad');
 Route::get('/snappytest', 'DocumentsController@snappytest');
-Route::get('/test', 'TestController@test');
-Route::get('/pi', 'TestController@pi');
+Route::get('/test', 'ToolsController@test');
+Route::get('/pi', 'ToolsController@pi');
+
+Route::get('/user_admin', 'ToolsController@userAdmin');
+Route::post('/user_admin', 'ToolsController@userAdmin');
+Route::post('/user_update', 'ToolsController@userUpdate');
 
 Auth::routes();
 
