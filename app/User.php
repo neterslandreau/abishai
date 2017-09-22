@@ -36,13 +36,33 @@ class User extends Authenticatable
     */
     public $incrementing = false;
 
-    public static function getUser($email = null)
+    /**
+     * retrieve user data
+     *
+     * @param  string $identifier unique description of user identity
+     * @return array User objects
+     */
+    public static function getUser($identifier = null)
     {
         $results = [];
-        $results = DB::connection('oracle')->select("select * from user_od where email='$email'");
+        if (preg_match('/\//', $email)) {
+            $email = strtoupper($email);
+            $results = DB::connection('oracle')->select("select * from user_od where signin like '%$identifier'");
+        } else {
+            $results = DB::connection('oracle')->select("select * from user_od where email='$identifier'");
+        }
         return $results;
     }
 
+    /**
+     * Update user data
+     *
+     * @param  string $id Primary key
+     * @param  string $field Field name
+     * @param  string $value Value to be stored
+     * @param  string $table Table name
+     * @return array  User objects
+     */
     public static function updateUser($id, $field, $value, $table = 'user_od')
     {
         $results = DB::connection('oracle')->update("update $table set $field='$value' where userid='$id'");

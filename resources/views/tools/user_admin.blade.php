@@ -7,7 +7,7 @@
 	<form class="form-inline" id="user-form" method="POST">
 	{{ csrf_field() }}
 		<div class="form-group col-xs-6">
-			<input class="form-control" type="email" name="email" id="user-form-email" placeholder="Enter user email">
+			<input class="form-control" type="text" name="email" id="user-form-email" placeholder="Enter user email or login">
 			<button type="submit" class="btn btn-default">Go</button>
 		</div>
 	</form>
