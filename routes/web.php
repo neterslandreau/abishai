@@ -25,6 +25,9 @@ Route::get('/user_admin', 'ToolsController@userAdmin');
 Route::post('/user_admin', 'ToolsController@userAdmin');
 Route::post('/user_update', 'ToolsController@userUpdate');
 
+Route::get('/homesite_admin', 'ToolsController@homesiteAdmin');
+Route::post('/homesite_update', 'ToolsController@homesiteAdmin');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
