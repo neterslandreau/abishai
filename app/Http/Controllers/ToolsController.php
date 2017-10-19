@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use DB;
 use App\User;
 use Config;
+use GuzzleHttp\Client;
 
 class ToolsController extends Controller
 {
@@ -49,6 +50,32 @@ class ToolsController extends Controller
     			return json_encode($results);
     		}
     	}
+    }
+
+    public function homesiteAdmin()
+    {
+    	// CTE crmdomain: https://secure-ausomxjja.crmondemand.com
+    	// Staging crmdomain: https://secure-ausomxfga.crmondemand.com
+    	$client = new Client();
+    	if (request()->method() === 'POST') {
+    		dd(request()->all());
+    	}
+    	if (request()->method() === 'GET') {
+    		// dd(request()->all());
+    		
+    	}
+    	// $sso = '%246%24Jku8S%2fbSeXTEX2b3RuKQwx6nluc0ON5FFvdVNstH61u%2fKWIkI%3d%3b%246%24nvRl9%2fARnfTG6%2fAhiblplC1vcIIzwF%2bCwaB8oa8BBpPoN7WXAD%2fEisTAGreC9S0hWC8Z7tgsbYE738m%2f0mwbYjvv9Jaw%3d%3d';
+    	// $crmdomain = 'https://secure-ausomxjja.crmondemand.com';
+    	// $oracle_proxy='http://omcs-proxy.oracleoutsourcing.com';
+    	// $page = "/Services/Integration?command=ssologin&odSsoToken=".$sso;
+    	// $url = $crmdomain . "/Services/Integration?command=ssologin&odSsoToken=".$sso;
+    	// $data = $client->request('GET', $url, [
+    	// 	'proxy' => $oracle_proxy,
+    	// 	'headers' => ["GET ".$page." HTTP/1.1"]
+    	// ]);
+    	// dd($data);
+    	// dd(urldecode($sso));
+    	return view('tools/homesite_admin', request()->all());
     }
 
     /**

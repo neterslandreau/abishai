@@ -45,8 +45,8 @@ class User extends Authenticatable
     public static function getUser($identifier = null)
     {
         $results = [];
-        if (preg_match('/\//', $email)) {
-            $email = strtoupper($email);
+        if (preg_match('/\//', $identifier)) {
+            $identifier = strtoupper($identifier);
             $results = DB::connection('oracle')->select("select * from user_od where signin like '%$identifier'");
         } else {
             $results = DB::connection('oracle')->select("select * from user_od where email='$identifier'");
@@ -68,4 +68,5 @@ class User extends Authenticatable
         $results = DB::connection('oracle')->update("update $table set $field='$value' where userid='$id'");
         return $results;
     }
+
 }

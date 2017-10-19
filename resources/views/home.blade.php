@@ -10,6 +10,9 @@
                 <div class="panel-body">
                     <a href="/user_admin">User Admin</a>
                 </div>
+                <div class="panel-body">
+                    <a href="/homesite_admin">Homesite Admin</a>
+                </div>
             </div>
         </div>
     </div>

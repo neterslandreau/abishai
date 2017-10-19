@@ -14,7 +14,7 @@ $(function () {
 				$('#table-column-' + field + '-' + id).html(value);
 			}
 		});
-
 	});
 
+	$('[data-toggle="tooltip"]').tooltip();
 });
