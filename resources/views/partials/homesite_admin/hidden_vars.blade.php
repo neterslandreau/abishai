@@ -12,6 +12,7 @@
 <input type="hidden" name="old_hs_incentive_non_recclosing" value="{{ $hs_incentive_non_recclosing }}">
 <input type="hidden" name="old_hs_incentive_lenderfees" value="{{ $hs_incentive_lenderfees }}">
 <input type="hidden" name="old_hs_incentive_concession" value="{{ $hs_incentive_concession }}">
+<input type="hidden" name="crm_sessionid" value="' . $sessionid . '">'
 */ ?>
 <input type="hidden" name="old_plan_id" value="{{ $plan_id }}">
 <input type="hidden" name="old_plSwing" value="{{ $swing }}">
