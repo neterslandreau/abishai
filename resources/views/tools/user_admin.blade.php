@@ -9,7 +9,7 @@
 		<div class="form-group col-xs-6">
 			<input class="form-control" type="text" name="email" id="user-form-email" placeholder="Enter user email or login">
 			<button type="submit" class="btn btn-default">Go</button>
-			<button class="btn btn-info" data-toggle="modal" data-target="#help">Help</button>
+			<a class="btn btn-info" data-toggle="modal" data-target="#help">Help</a>
 		</div>
 	</form>
 </div>
@@ -38,8 +38,8 @@
 	<div class="col-xs-4 text-danger">User not found!</div>
 </div>
 @endif
-@include('partials.user_admin.help_modal')
 
 @endsection
 
+@include('partials.user_admin.help_modal')
 
